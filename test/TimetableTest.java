@@ -4,6 +4,7 @@ import common.DayOfWeek;
 import common.TimeOfDay;
 import group.Group;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import training.Timetable;
 import training.TrainingSession;
@@ -14,6 +15,7 @@ import java.util.SortedSet;
 
 public class TimetableTest {
     @Test
+    @DisplayName("Одна тренировка в день")
     void testGetTrainingSessionsForDaySingleSession() {
         Timetable timetable = new Timetable();
 
@@ -29,6 +31,7 @@ public class TimetableTest {
     }
 
     @Test
+    @DisplayName("Несколько тренировок в один день")
     void testGetTrainingSessionsForDayMultipleSessions() {
         Timetable timetable = new Timetable();
 
@@ -65,6 +68,7 @@ public class TimetableTest {
     }
 
     @Test
+    @DisplayName("Одна тренировка в конкретное время")
     void testGetTrainingSessionsForDayAndTime() {
         Timetable timetable = new Timetable();
 
